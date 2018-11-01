@@ -22,6 +22,7 @@ body {
   background-color: #7184C1;
   font-weight: bold;
   padding: 4px;
+  display: flex;
   border-top: 1px solid black;
   border-left: 1px solid black;
   border-right: 1px solid black;
@@ -44,6 +45,7 @@ body {
   background-color: #7184C1;
   font-weight: bold;
   padding: 4px;
+  display: flex;
 }
 #previewWrapper #preview {
   background-color: #BCC4FF;
@@ -74,6 +76,13 @@ body {
 #previewWrapper #preview table, #previewWrapper #preview th, #previewWrapper #preview td {
   border: 2px solid #2C3C47;
   padding: 4px;
+}
+
+img {
+  width: 15px;
+  height: 15px;
+  align-self: center;
+  padding-right: 4px;
 }
 
 /*# sourceMappingURL=index.css.map */

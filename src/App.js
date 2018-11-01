@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import logo from './logo.svg';
 import marked from 'marked';
 
 const defaultMarkdown =
@@ -71,12 +72,12 @@ class App extends Component {
     return (
       <div className="app">
         <div id='editorWrapper'>
-          <div id='editorHeading'>Editor</div>
+          <div id='editorHeading'><img className='logo' src={logo} /> Editor</div>
           <textarea id='editor' rows='18' cols='100' onChange={this.handleChange}>{this.state.input}</textarea>
         </div>
 
         <div id='previewWrapper'>
-          <div id='previewHeading'>Preview</div>
+          <div id='previewHeading'><img className='logo' src={logo} /> Preview</div>
           <div id='preview' dangerouslySetInnerHTML={{__html: marked(this.state.input) }}></div>
         </div>
       </div>
