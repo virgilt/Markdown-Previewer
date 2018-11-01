@@ -40,7 +40,7 @@ And here. | Okay. | I think we get it.
         - That look like this.
 
 
-1. And there are numbererd lists too.
+1. And there are numbered lists too.
 1. Use just 1s if you want!
 1. But the list goes on...
 - Even if you use dashes or asterisks.
@@ -57,14 +57,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      input: '',
-    }
-  }
-
-  componentWillMount() {
-    this.setState({
       input: defaultMarkdown,
-    })
+    }
   }
 
   handleChange = (e) => {
@@ -75,9 +69,16 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <textarea rows='18' cols='100' id='editor' onChange={this.handleChange}>{this.state.input}</textarea>
-        <div id='preview' dangerouslySetInnerHTML={{__html: marked(this.state.input) }}></div>
+      <div className="app">
+        <div id='editorWrapper'>
+          <div id='editorHeading'>Editor</div>
+          <textarea id='editor' rows='18' cols='100' onChange={this.handleChange}>{this.state.input}</textarea>
+        </div>
+
+        <div id='previewWrapper'>
+          <div id='previewHeading'>Preview</div>
+          <div id='preview' dangerouslySetInnerHTML={{__html: marked(this.state.input) }}></div>
+        </div>
       </div>
     );
   }
